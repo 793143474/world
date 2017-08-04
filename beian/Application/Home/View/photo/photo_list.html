@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>鉴证备案——现场图集</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="网站描述">
+    <meta name="author" content="heyunqiang99@163.com">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+    <link rel="stylesheet" href="__PUBLIC__/home/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/photo_list.css" />
+</head>
+<body>
+<!-- 顶部开始 -->
+
+<div class="public-header cl">
+	<include file="Common:head_top" />
+    <div class="header-nav">
+		<div class="public-container cl">
+			<ul class="nav-mian">
+				<li class="on"><a href="{:U('index/index')}">首页</a></li>
+				<li><a href="{:U('special/Special_list')}">鉴证专场</a></li>
+				<li><a href="{:U('artist/artist_list')}">艺术家</a></li>
+				<li><a href="{:U('work/works')}">作品</a></li>
+				<li><a href="{:U('union/union')}">诚信联盟</a></li>
+			</ul>
+		</div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+<div class="mian_Box cl">
+	<div class="dress">
+		<a href="{:U('index/index')}">鉴证备案</a>&gt;
+		<span>现场图集</span>
+	</div>
+	<div class="photo_list">
+		<ul>
+			<volist name="tuji" id="vo">
+				<li>
+					<div class="photo_left">
+						<img src="__PUBLIC__/Upload/{$vo['banner']}" style="height: 200px;width: 100px">
+					</div>
+					<div class="photo_right">
+						<h2>
+							{$vo['name']}
+						</h2>
+						<p>
+							{$vo['text']}
+						</p>
+						<div class="pic_box">
+							<volist name="vo[images]" id="v">
+                                    <div class="pic_item">
+                                        <img src="__PUBLIC__/Upload/{$v}" style="width: 120px;height: 120px" >
+                                    </div>
+				            </volist>
+							<a href="{:U('photo/photo',array('id'=>$vo['id']))}">更多&gt;&gt;</a>
+						</div>
+					</div>
+				</li>
+			</volist>
+			<!--<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="photo_left">
+					<img src="images/74C58PICgy4_1024.jpg">
+				</div>
+				<div class="photo_right">
+					<h2>
+						价值千万的藏品就在你身边——玛瑙
+					</h2>
+					<p>
+						玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川玉髓类矿物的一种，经常是混有蛋白石和隐晶质石英的纹带状块体，常做饰物或玩赏用，主要分布于辽宁、内蒙古、四川...
+					</p>
+					<div class="pic_box">
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<div class="pic_item">
+							<img src="images/74C58PICgy4_1024.jpg">
+						</div>
+						<a href="photo.html">更多&gt;&gt;</a>
+					</div>
+				</div>
+			</li>-->
+		</ul>
+		<!--<div id="yema"></div>-->
+	</div>
+    <div class="content"  >
+        <div class="pages"  >
+            {$page}
+        </div>
+    </div>
+</div>
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!--<div class="public-footer">
+    <div class="public-container cl">
+        <div class="footer-left fl">
+            <a class="footer-logo" href="javacript:;"></a>
+            <ul class="footer-nav cl">
+                <li class="first"><a href="javacript:;">网站首页</a></li>
+                <li><a href="javacript:;">关于我们</a></li>
+                <li><a href="javacript:;">联系我们</a></li>
+                <li><a href="javacript:;">加入我们</a></li>
+                <li><a href="javacript:;">版权说明</a></li>
+                <li class="last"><a href="javacript:;">免责说明</a></li>
+            </ul>
+            <ul class="footer-copyrights cl">
+                <li class="first"><a href="javacript:;">华地收藏 www.hdcac.com</a></li>
+                <li>Copyright Reserved</li>
+                <li>2015-2017 华地文化艺术品中心版权</li>
+                <li class="last">电信与信息服务业务经营许可证</li>
+            </ul>
+            <ul class="footer-copyrights cl">
+                <li class="first">24小时服务热线：4008-207-108</li>
+                <li>公司名称：华地艺术品（上海）有限公司</li>
+                <li class="last">沪ICP备16022115号</li>
+            </ul>
+        </div>
+        <div class="footer-right fr">
+            <dl>
+                <dt class="footer-erweima01"></dt>
+                <dd>公众号二维码</dd>
+            </dl>
+            <dl>
+                <dt class="footer-erweima02"></dt>
+                <dd>微信服务二维码</dd>
+            </dl>
+        </div>
+    </div>
+</div>-->
+<!-- 底部结束 -->
+</body>
+
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/layui/lay/dest/layui.all.js" ></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/photo_list.js" ></script>

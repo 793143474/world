@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>鉴证备案——作品详情</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="网站描述">
+    <meta name="author" content="heyunqiang99@163.com">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/detalis.css" />
+</head>
+
+<body>
+<!-- 顶部开始 -->
+<div class="public-header cl">
+    <include file="Common:head_top" />
+    <div class="header-nav">
+        <div class="public-container cl">
+            <ul class="nav-mian">
+                <li><a href="{:U('index/index')}">首页</a></li>
+                <li><a href="{:U('special/Special_list')}">鉴证专场</a></li>
+                <li class="on"><a href="{:U('artist/artist_list')}">艺术家</a></li>
+                <li><a href="{:U('work/works')}">作品</a></li>
+                <li><a href="{:U('union/union')}">诚信联盟</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+<div class="appraisal">
+	<div class="dress">
+		<a href="{:U('index/index')}">鉴证备案</a>&gt;
+		<a href="{:U('artist/artist_list')}">艺术家</a>&gt;
+		<span>艺术家作品征集</span>
+	</div>
+	<div class="appraisal_top">
+		<div class="appraisal_Pic">
+			<div id="showbox">
+                <volist name="data[pictures]" id="vo">
+                            <img src="__PUBLIC__/Upload/{$vo}" width="270" height="180"  >
+                </volist>
+			 <!-- <img src="__PUBLIC__/home/images/001.jpg" width="270" height="180" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="320" height="735" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="430" height="430" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="290" height="290" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="786" height="525" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="300" height="300" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="200" height="200" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="810" height="582" />
+			  <img src="__PUBLIC__/home/images/001.jpg" width="1920" height="900" />-->
+			</div><!--展示图片盒子-->
+			<div id="showsum"></div><!--展示图片里边-->
+			<p class="showpage">
+			  <a href="javascript:void(0);" id="showlast"> < </a>
+			  <a href="javascript:void(0);" id="shownext"> > </a>
+			</p>
+		</div>
+		<div class="app_txt">
+            <div class="txt_top">
+                <h1>藏品名称：{$data['name']}</h1>
+                <p><span>备案编号：</span>{$data['bianhao']}</p>
+                <p><span>备案时间：</span>{$data['btime']}</p>
+                <p><span>鉴定结果：</span>{$data['result']}</p>
+                <p><span>鉴定机构：</span>华地文化</p>
+            </div>
+            <div class="txt_bottom">
+                <p><span>藏品来源：</span>{$data['lainame']}</p>
+                <p><span>藏品年限：</span>{$data['cztime']}</p>
+                <p><span>藏品类别：</span>{$data['category']}</p>
+                <p><span>藏品规格：</span>{$data['size']}</p>
+            </div>
+		</div>
+	</div>
+	<div class="appraisal_bottom">
+		<div class="app_nav">
+			<span>鉴定证书</span>
+		</div>
+		<div class="certificate">
+            <volist name="data[certificate]" id="vo">
+                <img src="__PUBLIC__/Upload/{$vo}">
+            </volist>
+		</div>
+	</div>
+</div>
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!--<div class="public-footer">
+    <div class="public-container cl">
+        <div class="footer-left fl">
+            <a class="footer-logo" href="javacript:;"></a>
+            <ul class="footer-nav cl">
+                <li class="first"><a href="javacript:;">网站首页</a></li>
+                <li><a href="javacript:;">关于我们</a></li>
+                <li><a href="javacript:;">联系我们</a></li>
+                <li><a href="javacript:;">加入我们</a></li>
+                <li><a href="javacript:;">版权说明</a></li>
+                <li class="last"><a href="javacript:;">免责说明</a></li>
+            </ul>
+            <ul class="footer-copyrights cl">
+                <li class="first"><a href="javacript:;">华地收藏 www.hdcac.com</a></li>
+                <li>Copyright Reserved</li>
+                <li>2015-2017 华地文化艺术品中心版权</li>
+                <li class="last">电信与信息服务业务经营许可证</li>
+            </ul>
+            <ul class="footer-copyrights cl">
+                <li class="first">24小时服务热线：4008-207-108</li>
+                <li>公司名称：华地艺术品（上海）有限公司</li>
+                <li class="last">沪ICP备16022115号</li>
+            </ul>
+        </div>
+        <div class="footer-right fr">
+            <dl>
+                <dt class="footer-erweima01"></dt>
+                <dd>公众号二维码</dd>
+            </dl>
+            <dl>
+                <dt class="footer-erweima02"></dt>
+                <dd>微信服务二维码</dd>
+            </dl>
+        </div>
+    </div>
+</div>-->
+<!-- 底部结束 -->
+</body>
+
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/detalis.js" ></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+	  var showproduct = {
+		  "boxid":"showbox",
+		  "sumid":"showsum",
+		  "boxw":620,//宽度,该版本中请把宽高填写成一样
+		  "boxh":360,//高度,该版本中请把宽高填写成一样
+		  "sumw":90,//列表每个宽度,该版本中请把宽高填写成一样
+		  "sumh":90,//列表每个高度,该版本中请把宽高填写成一样
+		  "sumi":3,//列表间隔
+		  "sums":6,//列表显示个数
+		  "sumsel":"sel",
+		  "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+		  "lastid":"showlast",
+		  "nextid":"shownext"
+		  };//参数定义	  
+	 $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+  });
+</script>

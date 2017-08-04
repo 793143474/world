@@ -1,0 +1,84 @@
+<header>
+    <h1><img src="__PUBLIC__/admin/images/admin_logo.png"/></h1>
+    <ul class="rt_nav">
+        <li><a href="http://www.deathghost.cn" target="_blank" class="website_icon">站点首页</a></li>
+        <li><a href="#" class="clear_icon">清除缓存</a></li>
+        <li><a href="#" class="admin_icon">DeathGhost</a></li>
+        <li><a href="{:U('member/member_list')}" class="set_icon">账号设置</a></li>
+        <li><a href="#" target="_blank" class="website_icon">{$Think.session.name}</a></li>
+        <li><a href="{:U('admin/common/tuichu')}" class="quit_icon">安全退出</a></li>
+    </ul>
+</header>
+<aside class="lt_aside_nav content mCustomScrollbar">
+<body>
+
+    <div class="nav">
+        <h2><a href="{:U('admin/index/index')}">系统首页</a></h2>
+        <ul>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>系统管理</a>
+                <ul>
+                    <li><a href="{:U('postion/postion_detail')}">系统添加</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>作品管理</a>
+                <ul>
+
+                    <!--当前链接则添加class:active-->
+                    <li><a href="{:U('product/product_list')}" class="active">作品列表</a></li>
+                    <!--<dd><a href="{:U('product/product_detail')}">添加作品</a></dd>-->
+                    <li><a href="{:U('product/product_category')}">作品分类</a></li>
+                    <li><a href="{:U('product/product_material')}">作品材质分类</a></li>
+                    <li><a href="{:U('product/songjian')}">送鉴列表</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>鉴定专场</a>
+                <ul>
+                    <li><a href="{:U('special/special_detail')}">添加专场</a></li>
+                    <li><a href="{:U('special/special_list')}">专场列表</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>新闻资讯</a>
+                <ul>
+
+                    <li><a href="{:U('news/news_list')}">新闻资讯列表</a></li>
+                    <li><a href="{:U('news/news_detail')}">添加新闻资讯</a></li>
+                    <li><a href="{:U('news/problem_list')}">常见问题列表</a></li>
+                    <li><a href="{:U('news/problem_detail')}">添加常见问题</a></li>
+
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>艺术家管理</a>
+                <ul>
+
+                    <li><a href="{:U('artist/artist_detail')}">添加艺术家</a></li>
+                    <li><a href="{:U('artist/artist_list')}">艺术家管理</a></li>
+                    <li><a href="{:U('artist/artist_ex')}">艺术家审核</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>组织机构管理</a>
+                <ul>
+                    <li><a href="{:U('zuzhi/zuzhi')}">机构列表</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>联盟管理</a>
+                <ul>
+                    <li><a href="{:U('union/union')}">联盟列表</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>图集管理</a>
+                <ul>
+
+                    <li><a href="{:U('atlas/atlas_list')}">图集列表</a></li>
+                    <li><a href="{:U('atlas/atlas_detail')}">添加图集</a></li>
+                </ul>
+            </li>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a>会员管理</a>
+                <ul>
+                    <li><a href="{:U('user/user_list')}">会员列表</a></li>
+                    <li><a href="{:U('user/user_detail')}">添加会员（详情）</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</aside>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>后台管理系统</title>
+    <meta name="author" content="DeathGhost" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/admin/js/html5.js"></script>
+    <![endif]-->
+    <script src="__PUBLIC__/admin/js/jquery.js"></script>
+    <script src="__PUBLIC__/admin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link href="__PUBLIC__/admin/Css/mypage.css" rel="stylesheet" type="text/css"/>
+    <script>
+        (function($){
+            $(window).load(function(){
+                $("a[rel='load-content']").click(function(e){
+                    e.preventDefault();
+                    var url=$(this).attr("href");
+                    $.get(url,function(data){
+                        $(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+                        //scroll-to appended content
+                        $(".content").mCustomScrollbar("scrollTo","h2:last");
+                    });
+                });
+                $(".content").delegate("a[href='top']","click",function(e){
+                    e.preventDefault();
+                    $(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+                });
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+<include file="Common:head_banner" />
+<section class="rt_wrap content mCustomScrollbar">
+    <div class="rt_content">
+        <div class="page_title">
+            <h2 class="fl">账号列表</h2>
+            <a href="{:U('member/member_detail')}" class="fr top_rt_btn add_icon">添加账号</a>
+        </div>
+
+        <table class="table">
+            <tr>
+                <th><a>批量删除</a></th>
+                <th>管理员账号</th>
+                <th>注册时间</th>
+                <th>操作</th>
+            </tr>
+            <volist name="data" id="vo">
+                <tr>
+                    <td class="center">
+                        <input type="checkbox" class="textbox textbox_295" name="style"/>
+                    </td>
+                    <td class="center">{$vo['name']}</td>
+                    <td class="center">{$vo['time']}</td>
+                    <td class="center">
+                        <a href="{:U('member/member_list',array('aid'=>$vo['aid']))}" title="删除" name="delete" class="link_icon">&#100;</a>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+        <tr class="content">
+            <td colspan="3" bgcolor="#FFFFFF"><div class="pages">
+                {$page}
+            </div></td>
+        </tr>
+    </div>
+</section>
+</body>
+</html>

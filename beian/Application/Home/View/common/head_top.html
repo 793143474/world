@@ -1,0 +1,63 @@
+<div class="header-topbar cl">
+    <div class="public-container">
+        <div class="header-links fl">
+            <a href="{:U('')}">华地收藏</a>
+            <a href="http://www.jxpmcn.com">璟祥拍卖首页</a>
+        </div>
+        <div class="header-menu fr">
+            <ul>
+                <li class="item-w300">
+                    <!-- 未登录 -->
+                    <eq name="nickname" value="">
+                    <div class="login">
+                        <a href="{:U('login/login')}">您好,请<span>登录</span></a>
+                        <a href="{:U('login/register')}">免费注册</a>
+                    </div></eq>
+                    <!-- 登录之后 -->
+                    <neq name="nickname" value="">
+                        <div class="login">
+                            <a href="javacript:;">您好,<span>{$nickname}</span>!</a>
+                            <a href="{:U('login/tuichu')}">退出</a>
+                        </div>
+                    </neq>
+                    <div class="afterlogin" style="display: none;">
+                        <a href="javacript:;">您好,<span>{$nickname}</span>!</a>
+                        <a href="javacript:;">退出</a>
+                    </div>
+                </li>
+                <li class="item"><a href="javacript:;">我的订单</a></li>
+                <li class="item">
+                    <a class="nav-more" href="javacript:;">我的收藏</a>
+                    <div class="sub-nav">
+                        <a href="javacript:;">我的任务</a>
+                        <a href="javacript:;">我的账户</a>
+                        <a href="javacript:;">我的订单</a>
+                        <a href="javacript:;">我的认证</a>
+                        <a href="javacript:;">历史购买</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a class="nav-more" href="javacript:;">客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户</a>
+                    <div class="sub-nav">
+                        <a href="javacript:;">帮助中心</a>
+                        <a href="javacript:;">售后服务</a>
+                        <a href="javacript:;">在线客服</a>
+                        <a href="javacript:;">意见反馈</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <a class="nav-more" href="javacript:;">商&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户</a>
+                    <div class="sub-nav">
+                        <a href="javacript:;">合作中心</a>
+                        <a href="javacript:;">商家帮助</a>
+                    </div>
+                </li>
+                <li class="item"><a href="javacript:;">手机收藏网</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header-logo-search public-container cl">
+    <a class="header-logo fl" href="{:U(index/index)}"></a>
+    <h1 class="fl">华地艺术品鉴证备案中心</h1>
+</div>

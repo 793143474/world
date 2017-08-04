@@ -1,0 +1,494 @@
+.news_box{
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.news_List{
+	float: left;
+	width: 800px;
+	margin-right: 40px;
+	border-top: 1px solid #333333;
+}
+.news_List ul{
+	padding: 20px 0;
+	border-bottom: 1px solid #DCDCDC;
+}
+.news_List li{
+	overflow: hidden;
+	line-height: 28px;
+}
+.news_List li em{
+	float: left;
+	width: 10px;
+}
+.news_List li a{
+	float: left;
+	width: 640px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.news_List li .time{
+	float:right;
+	width: 140px;
+	color: #999999;
+}
+/*right*/
+.news_right{
+	float: right;
+	width: 360px;
+}
+/*备案流程*/
+.send-process-box {
+    width: 318px;
+    padding: 20px 20px 34px 20px;
+    border: 1px solid #ccc;
+}
+
+.id-record .forensic-artist {
+    overflow: hidden;
+    width: 796px;
+}
+
+.id-record .forensic-artist li {
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 180px;
+    height: 260px;
+    margin-top: 20px;
+    margin-right: 19px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    -ms-box-sizing: border-box;
+}
+
+.id-record .forensic-artist li .img-artist {
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+}
+
+.id-record .forensic-artist li .artist-info {
+    text-align: center;
+}
+
+.id-record .forensic-artist li .artist-info .zjmTit a {
+    font-weight: bold;
+    display: block;
+    padding: 6px 0 10px;
+    color: #333;
+}
+
+.id-record .forensic-artist li .artist-info .zjmNum span {
+    font-weight: 700;
+    color: #ee572c;
+}
+
+.id-record .forensic-artist li .artist-info .zjFq {
+    line-height: 30px;
+    height: 30px;
+    color: #999;
+}
+
+.id-record-bottom {
+    margin-top: 30px;
+}
+
+ .circuit {
+    width: 318px;
+}
+
+ .circuit h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+ .circuit ul {
+    padding-bottom: 40px;
+}
+
+ .circuit li {
+    line-height: 40px;
+    float: left;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+ .circuit li.arrowL {
+    width: 50px;
+    height: 40px;
+    border: 0;
+    background-image: url(../img/arrowL.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ .circuit li.arrowBR {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(../img/arrow_b.gif);
+    background-repeat: no-repeat;
+    background-position: 242px center;
+}
+
+.circuit li.arrowR {
+    width: 50px;
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(../img/arrowR.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.circuit li.arrowBL {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+    background-image: url(../img/arrow_b.gif);
+    background-repeat: no-repeat;
+    background-position: 62px center;
+}
+
+.circuit li:hover a {
+    color: #ee572c;
+}
+
+.circuit .send-jian {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: #ee572c;
+}
+
+.circuit .send-jian:hover {
+    background: #d64e27;
+}
+
+.want-query .want-query-select {
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+}
+
+.want-query .want-query-search {
+    line-height: 40px;
+    display: block;
+    width: 308px;
+    height: 40px;
+    margin-top: 30px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+}
+
+.want-query .want-query-btn {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 50px;
+    display: block;
+    width: 320px;
+    height: 50px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    background: #ee572c;
+}
+
+.want-query .want-query-btn:hover {
+    background: #d64e27;
+}
+.index-panel .index-panel-left{
+    width: 800px;
+    float: left;
+}
+.index-panel .index-panel-right{
+    width: 360px;
+    float: right;
+}
+
+.index-panel-header {
+    margin-top: 25px;
+    position: relative;
+    margin-bottom: 36px;
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px solid #666666;
+}
+.index-panel-header h3 {
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+.index-panel-header .want-zj{
+    position: absolute;
+    top: 15px;
+    right: 95px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    background: #ee572c;
+    color:#fff;
+    text-align: center;
+}
+/*常见问题*/
+
+.questionslist li {
+    line-height: 30px;
+    overflow: hidden;
+    height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*名家鉴证实录*/
+
+.forensics {
+    width: 360px;
+    padding: 10px;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+/* 本例子css */
+
+.picScroll-left {
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.picScroll-left .hd {
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.picScroll-left .hd span{
+    width: 80px;
+    color:#333;
+    text-align: center;
+    background: #ebebeb;
+    display: inline-block;
+}
+.picScroll-left .bd {
+    margin-top: 20px;
+}
+
+.picScroll-left .bd ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.picScroll-left .bd ul li {
+    float: left;
+    overflow: hidden;
+    _display: inline;
+}
+
+.picScroll-left .bd ul li .pic {
+    width: 338px;
+    height: 100px;
+}
+
+.picScroll-left .bd ul li .pic img {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.picScroll-left .bd ul li .pic .works-num {
+    display: block;
+    width: 180px;
+    padding-left: 20px;
+    height: 100px;
+    margin-left: 20px;
+    background: #f1f1f1;
+    position: relative;
+}
+.picScroll-left .bd ul li .pic .works-num::before{
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    content:"";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 10px solid #f1f1f1;
+    border-bottom: 5px solid transparent;
+}
+.picScroll-left .bd ul li:hover .pic .works-num{
+    background: #ee572c;
+    color:#fff;
+}
+.picScroll-left .bd ul li:hover .pic .works-num p .num{
+    color:#fff;
+}
+.picScroll-left .bd ul li:hover .pic .works-num::before{
+    border-right: 10px solid #ee572c;
+}
+.picScroll-left .bd ul li .pic .works-num p{
+    margin-top: 15px;
+}
+.picScroll-left .bd ul li .pic .works-num p .num{
+    font-size:24px;
+    color:#ee572c;
+    font-weight:700;
+}
+.picScroll-left .bd ul li .info {
+    margin-top: 20px;
+}
+.picScroll-left .bd ul li .info p{
+    line-height: 22px;
+}
+/*精彩回顾*/
+.history-look{
+    margin-top: 30px;
+}
+.history-look .title{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.history-look h3{
+    width: 80px;
+    color: #333;
+    text-align: center;
+    background: #ebebeb;
+    display: inline-block;
+}
+.history-look .pic{
+    margin-top: 20px;
+}
+.history-look .pic .author-img{
+    width: 100px;
+    height: 100px;
+}
+.history-look .pic .works-num {
+    display: block;
+    width: 180px;
+    padding-left: 20px;
+    height: 100px;
+    margin-left: 20px;
+    background: #f1f1f1;
+    position: relative;
+}
+
+.history-look .pic .works-num::before{
+    position: absolute;
+    left: -10px;
+    top: 50px;
+    content:"";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 10px solid #f1f1f1;
+    border-bottom: 5px solid transparent;
+}
+.history-look .pic .works-num:hover::before{
+    border-right: 10px solid #ee572c;
+}
+.history-look .pic .works-num p{
+	    margin-top: 15px;
+}
+
+.history-look .pic .works-num p .num{
+	font-size: 24px;
+    color: #ee572c;
+    font-weight: 700;
+}
+
+.history-look .pic .works-num:hover{
+	background: #ee572c;
+    color:#fff;
+}
+.history-look .pic .works-num:hover p .num{
+	color: #FFFFFF;
+}
+.history-look .info a{
+    display: block;
+    width: 308px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 30px;
+}
+.history-look .more-info{
+    margin-right: 10px;
+}
+/*已在线鉴定*/
+.instance .insTit {
+    width: 360px;
+    border-bottom: 1px solid #ebebeb;
+    height: 30px;
+}
+.instance .insTit span {
+    display: block;
+    background: #ebebeb;
+    color: #333;
+    width: 90px;
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+}
+.instance .txtlist {
+    padding-top: 10px;
+    width: 360px;
+}
+.instance .txtlist li {
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+}
+/*已初审精品赏析*/
+.show-works{
+    width: 340px;
+    padding:20px 10px 0;
+    border:1px solid #ccc;
+}
+.show-works ul {
+    width: 360px;
+    overflow:hidden;
+}
+.show-works ul li{
+    text-align: center;
+    width: 160px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.show-works ul li .title{
+    height: 32px;
+    line-height: 32px;
+    display: block;
+    padding: 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;;
+}
+.show-works ul li:hover .title{
+    background: #ee572c;
+    color:#fff;
+}

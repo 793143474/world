@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>后台管理系统</title>
+    <meta name="author" content="DeathGhost" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/admin/js/html5.js"></script>
+    <![endif]-->
+    <script src="__PUBLIC__/admin/js/jquery.js"></script>
+    <script src="__PUBLIC__/admin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link href="__PUBLIC__/admin/Css/mypage.css" rel="stylesheet" type="text/css"/>
+    <script>
+
+        (function($){
+            $(window).load(function(){
+
+                $("a[rel='load-content']").click(function(e){
+                    e.preventDefault();
+                    var url=$(this).attr("href");
+                    $.get(url,function(data){
+                        $(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+                        //scroll-to appended content
+                        $(".content").mCustomScrollbar("scrollTo","h2:last");
+                    });
+                });
+
+                $(".content").delegate("a[href='top']","click",function(e){
+                    e.preventDefault();
+                    $(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+                });
+
+            });
+        })(jQuery);
+    </script>
+</head>
+<body>
+<!--header-->
+<include file="Common:head_banner" />
+<section class="rt_wrap content mCustomScrollbar">
+    <div class="rt_content">
+        <div class="page_title">
+            <h2 class="fl">机构列表</h2>
+        </div>
+        <section class="mtb">
+            <form action="zuzhi" method="post" enctype="multipart/form-data">
+                <select class="select" name="select">
+                    <option value="1">机构名称</option>
+                    <option value="2">机构类型</option>
+                    <option value="3">机构联系人</option>
+                </select>
+                <input type="text" class="textbox textbox_225" name="j_j" placeholder="..."/>
+                <input type="submit" value="查询" class="group_btn"/>
+            </form>
+        </section>
+        <div name="select">
+            <a href="{:U('zuzhi/zuzhi')}"><input type="button" value="新增机构" class="group_btn" style="color: orange"/></a>
+            <a href="{:U('zuzhi/zuzhi_one')}"><input type="button" value="审核通过" class="group_btn" /></a>
+            <a href="{:U('zuzhi/zuzhi_two')}"><input type="button" value="初审失败" class="group_btn" /></a>
+        </div>
+        <form name="myform" id="myform" method="post">
+        <table class="table">
+            <tr>
+                <th><button form="myform" onclick="return confirm('您确定要批量删除？')" formaction="bdel"　type="submit">批量删除</button></th>
+                <th>机构名称</th>
+                <th>法人姓名</th>
+                <th>联系人名称</th>
+                <th>联系电话</th>
+                <th>机构地址</th>
+                <th>加入时间</th>
+                <th>操作</th>
+            </tr>
+            <volist name="data" id="vo">
+                <tr>
+                    <td class="center"><input type="checkbox" name="id[]" value="{$vo['id']}" /></td>
+                    <td class="center">{$vo['mechanism_name']}</td>
+                    <td class="center">{$vo['mechanism_faren']}</td>
+                    <td class="center">{$vo['mechanism_contacts']}</td>
+                    <td class="center">{$vo['mobile']}</td>
+                    <td class="center">{$vo['mechanism_address']}</td>
+                    <td class="center">{$vo['time']}</td>
+                    <td class="center">
+                        <a href="{:U('zuzhi/zuzhi_edit',array('id'=>$vo['id']))}" title="编辑" class="link_icon">&#101;</a>
+                        <a href="{:U('zuzhi/zuzhi',array('id'=>$vo['id']))}" title="删除" name="delete" class="link_icon" onclick="return confirm('您确定要删除？')">&#100;</a>
+                    </td>
+                </tr>
+            </volist>
+        </table>
+            </form>
+        <tr class="content">
+            <td colspan="3" bgcolor="#FFFFFF"><div class="pages">
+                {$page}
+            </div></td>
+        </tr>
+    </div>
+</section>
+</body>
+</html>

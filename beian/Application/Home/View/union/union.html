@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>鉴证备案——诚信联盟</title>
+	<meta name="keywords" content="关键词">
+	<meta name="description" content="网站描述">
+	<meta name="author" content="heyunqiang99@163.com">
+	<meta name="renderer" content="webkit">
+	<link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+	<link rel="stylesheet" href="__PUBLIC__/home/css/union.css" />
+</head>
+
+<body>
+<!-- 顶部开始 -->
+<div class="public-header cl">
+	<include file="Common:head_top" />
+    <div class="header-nav">
+        <div class="public-container cl">
+            <ul class="nav-mian">
+                <li><a href="{:U('index/index')}">首页</a></li>
+                <li><a href="{:U('special/special_list')}">鉴证专场</a></li>
+                <li ><a href="{:U('artist/artist_list')}">艺术家</a></li>
+                <li><a href="{:U('work/works')}">作品</a></li>
+                <li class="on"><a href="{:U('union/union')}">诚信联盟</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+<!-- 顶部结束 -->
+<div class="union">
+	<div class="banner">
+		<div class="banner_left">
+			<h2>
+				诚信联盟
+			</h2>
+			<p>
+				华地收藏网作为中国首批艺术品鉴定试点单位，为响应文化部艺术品管理政策实施，推动建立艺术市场诚信体系，联合多家艺术机构及拍卖行，针对市场上的假艺术作品和赝品，打造诚信联盟平台，助力艺术市场。让科学鉴定成为市场准则，为艺术家、收藏家服务，保障藏家和艺术家的权益，规范和完善艺术品市场秩序，让艺术品市场更诚信更可靠。
+			</p>
+			<p>
+				我们承诺：诚信联盟平台由华地收藏网运营维护，并实施监督管理。所有诚信机构需经过严格审核才能加入华地诚信联盟平台。后期一旦出现售卖假作现象，将从诚信联盟永久除名。
+			</p>
+		</div>
+		<div class="banner_right">
+			<p>咨询电话</p>
+			<strong>4008-207-108</strong>
+		</div>
+	</div>
+	<div class="three_union">
+		<h3>诚信联盟价值</h3>
+		<div class="items">
+			<span>1</span>
+			<strong>体系</strong>
+			<p>华地艺术网携手艺术机构与<br />拍卖行缔造艺术市场诚信体系</p>
+		</div>
+		<div class="items">
+			<span>2</span>
+			<strong>体系</strong>
+			<p>华地艺术网携手艺术机构与<br />拍卖行缔造艺术市场诚信体系</p>
+		</div>
+		<div class="items">
+			<span>3</span>
+			<strong>体系</strong>
+			<p>华地艺术网携手艺术机构与<br />拍卖行缔造艺术市场诚信体系</p>
+		</div>
+	</div>
+	<div class="up_union">
+		<h1>申请加入诚信联盟</h1>
+		<div class="form">
+			<form action="union" method="post" enctype="multipart/form-data">
+
+				<li>
+					<span  style="width:120px;" >上传图片：</span>
+					<label  style="width: 120px;width: 120px">
+						<img src="__PUBLIC__/Upload/{$file[picture]}" style="width: 120px;width: 120px">
+						<input type="file" name="picture"/>
+						<span>上传图片</span>
+					</label>
+				</li>
+
+				<div class="form_item">
+					<div class="form_left">
+						<em>*</em>
+						<span>画廊名称：</span>
+					</div>
+					<div class="form_right">
+						<input name="name" placeholder="请输入画廊名称">
+					</div>
+				</div>
+
+
+				<div class="form_item">
+					<div class="form_left">
+						<em>*</em>
+						<span>联系人：</span>
+					</div>
+					<div class="form_right">
+						<input name="contacts_name" placeholder="请输入联系人">
+					</div>
+				</div>
+				<div class="form_item">
+					<div class="form_left">
+						<em>*</em>
+						<span>联系电话：</span>
+					</div>
+					<div class="form_right">
+						<input name="contacts_tele" placeholder="请输入联系电话">
+					</div>
+				</div>
+				<div class="form_item">
+					<div class="form_left">
+						<span>电子邮箱：</span>
+					</div>
+					<div class="form_right">
+						<input name="contacts_email" placeholder="请输入有效电子邮箱">
+					</div>
+				</div>
+				<div class="form_item">
+					<div class="form_left">
+						<span>画廊地址：</span>
+					</div>
+					<div class="form_right">
+						<input name="address" placeholder="请输入画廊地址">
+					</div>
+				</div>
+				<div class="form_item">
+					<div class="form_left">
+						<span>备注：</span>
+					</div>
+					<div class="form_right">
+						<textarea name="remarks"></textarea>
+					</div>
+				</div>
+				
+				<div class="form_item">
+					<div class="form_left">
+						<span></span>
+					</div>
+					<div class="form_right">
+						<button type="submit">提交信息</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="famliy">
+		<h2>联盟成员</h2>
+		<ul>
+			<volist name="data" id="vo">
+				<li>
+					<img src="__PUBLIC__/Upload{$vo['picture']}">
+					<a href="">连豪美术馆</a>
+				</li>
+			</volist>
+		<!--	<li>
+				<img src="__PUBLIC__/home/img/lo.jpg">
+			<a href="{:U('artist/artist')}">连豪美术馆</a>
+			</li>
+			<li>
+				<img src="__PUBLIC__/home/img/lo.jpg">
+				<a href="{:U('artist/artist')}">连豪美术馆</a>
+			</li>
+			<li>
+				<img src="__PUBLIC__/home/img/lo.jpg">
+				<a href="{:U('artist/artist')}">连豪美术馆</a>
+			</li>
+			<li>
+				<img src="__PUBLIC__/home/img/lo.jpg">
+				<a href="{:U('artist/artist')}">连豪美术馆</a>
+			</li>
+			<li>
+				<img src="__PUBLIC__/home/img/lo.jpg">
+				<a href="{:U('artist/artist')}">连豪美术馆</a>
+			</li>-->
+		</ul>
+	</div>
+	<div class="ruijian">
+		<h2>
+			推荐作品
+		</h2>
+		<ul>
+
+            <volist name="da" id="vo" offset="5" length="14">
+				<li>
+					<a href="{:U('details/details')}">
+						<img src="__PUBLIC__/Upload{$vo['banner']}">
+						<p>
+							{$vo['name']}
+						</p>
+					</a>
+				</li>
+		    </volist>
+			<!--<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('details/details')}">
+					<img src="__PUBLIC__/home/images/74C58PICgy4_1024.jpg">
+					<p>
+						纯手工制陶瓷茶具
+					</p>
+				</a>
+			</li>-->
+		</ul>
+	</div>
+</div>
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!-- 底部结束 -->
+</body>
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>

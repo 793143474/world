@@ -1,0 +1,59 @@
+.photo_list{
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.photo_list li{
+	padding: 20px 30px;
+	border: 1px solid #DCDCDC;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.photo_left{
+	float: left;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	margin-right: 40px;
+}
+.photo_left img{
+	max-height: 200px;
+	max-width: 200px;
+	display: block;
+}
+.photo_right{
+	width: 890px;
+	float: left;
+	overflow: hidden;
+}
+.photo_right h2{
+	overflow: hidden;
+	font-size: 16px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+.photo_right p{
+	overflow: hidden;
+	line-height: 24px;
+	height: 48px;
+}
+.pic_box{
+	overflow: hidden;
+	height: 120px;
+}
+.pic_item{
+	float: left;
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	margin-right: 20px ;
+}
+.pic_item img{
+	max-height: 120px;
+	max-width: 120px;
+}
+.pic_box a{
+	float: left;
+	line-height: 30px;
+	margin-top: 90px;
+}

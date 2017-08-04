@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>首页</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="网站描述">
+    <meta name="author" content="heyunqiang99@163.com">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/index.css">
+</head>
+
+<body>
+<!-- 顶部开始 -->
+<div class="public-header cl">
+    <include file="Common:head_top" />
+    <div class="header-nav">
+        <div class="public-container cl">
+            <ul class="nav-mian">
+                <li class="on"><a href="{:U('index/index')}">首页</a></li>
+                <li><a href="{:U('special/Special_list')}">鉴证专场</a></li>
+                <li><a href="{:U('artist/artist_list')}">艺术家</a></li>
+                <li><a href="{:U('work/works')}">作品</a></li>
+                <li><a href="{:U('union/union')}">诚信联盟</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+<!-- 首页banner开始 -->
+<div class="index-banner">
+    <div class="public-container cl">
+        <div class="imgscroll-introduction fl">
+            <div class="imgscroll">
+                <div id="demo1" class="picBtnTop">
+                    <div class="hd">
+                        <ul>
+                            <volist name="result" id="vo" offset="0" length='5'>
+                                <li><a href="{:U('news/news',array('nid'=>$vo['nid']))}">{$vo['ntitle']}</a></li>
+                            </volist>
+
+                        </ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <volist name="result" id="vo" offset="0" length='5'>
+                                <li>
+                                    <div class="pic">
+                                        <a href="{:U('news/news',array('nid'=>$vo['nid']))}"><img src="__PUBLIC__/Upload/{$vo['banner']}"/></a>
+                                    </div>
+                                </li>
+                            </volist>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="introduction">
+                <ul>
+                    <li>
+                        <div class="one">
+                            <h2><span>鉴证备案的价值</span><br><b>为艺术品<br>建立“身份证”</b></h2>
+                            <p><a href="{:U('value/value')}" target="_blank">详细 &gt;&gt;</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="two">
+                            <h2><span>鉴证备案的价值</span><br><b>备案数据云存储，<br>可查询可验证</b></h2>
+                            <p><a href="{:U('value/value')}" target="_blank">详细 &gt;&gt;</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="three">
+                            <h2><span>鉴证备案的价值</span><br><b>从此让中国<br>艺术品传承有序</b></h2>
+                            <p><a href="{:U('value/value')}" target="_blank">详细 &gt;&gt;</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 藏品送鉴流程 -->
+        <div class="send-process fr">
+            <div class="send-process-box">
+                <div class="circuit">
+                    <h2>藏品送鉴流程</h2>
+                    <ul class="cl">
+                        <li><a href="{:U('explain/explain')}" target="_blank">线上申请</a></li>
+                        <li class="arrowL"></li>
+                        <li><a href="{:U('explain/explain')}" target="_blank">艺术家初审</a></li>
+                        <li class="arrowBR"></li>
+                        <li><a href="{:U('explain/explain')}" target="_blank">现场鉴证</a></li>
+                        <li class="arrowR"></li>
+                        <li><a href="{:U('explain/explain')}" target="_blank">电话预约藏家鉴证</a></li>
+                        <li class="arrowBL"></li>
+                        <li><a href="{:U('explain/explain')}" target="_blank">技术备案</a></li>
+                        <li class="arrowL"></li>
+                        <li><a href="{:U('explain/explain')}" target="_blank">证书发放</a></li>
+                    </ul>
+                    <a href="{:U('biaodan/biaodan')}" class="send-jian" target="_blank">我要送鉴</a>
+                </div>
+                <div class="want-query">
+                    <form action="index" method="post" enctype="multipart/form-data">
+                        <select class="want-query-select" name="lei_bie">
+                            <option  value="0">按备案编号</option>
+                            <option  value="1">按作品名称</option>
+                            <option  value="2">按艺术家名称</option>
+                            <option  value="3">按机构名称</option>
+                        </select>
+                        <input name="j_g" style="width: 320px;height: 42px;margin-top: 40px;border: 1px solid #cccccc">
+                      <!--  <input class="want-query-search" name="j_g" placeholder="请输入您要查询的内容">-->
+                        <input type="submit" class="want-query-btn" value="我要查询">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 首页banner结束 -->
+<!-- 新闻资讯常见问题开始 -->
+<div class="index-panel">
+    <div class="public-container cl">
+        <div class="index-panel-left">
+            <div class="index-panel-header cl">
+                <h3 class="fl">新闻资讯</h3>
+                <a class="more-links fr" href="{:U('news/news_list')}">更多&gt;&gt;</a>
+            </div>
+            <div class="index-panel-body">
+                <div class="newslist">
+                    <!-- 显示八条资讯 -->
+                    <ul>
+                        <volist name="result" id="vo" offset="0" length='8'>
+                            <li>
+                                <a href="{:U('news/news',array('nid'=>$vo['nid']))}" target="_blank" title="{$vo['name']}"><em>●</em>[{$vo['name']}]</a>
+                                <a class="title" href="{:U('news/news',array('nid'=>$vo['nid']))}" target="_blank" title="{$vo['ntitle']}">
+                                    {$vo['ntitle']}</a>
+                            </li>
+                        </volist>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="index-panel-right">
+            <div class="index-panel-header cl">
+                <h3 class="fl">常见问题</h3>
+            </div>
+            <div class="index-panel-body">
+                <div class="questionslist">
+                    <!-- 显示四条 -->
+                    <ul>
+                        <volist name="dpr" id="vo" offset="0" length='4'>
+                            <li>
+                                <a href="{:U('news/news',array('id'=>$vo['id']))}" target="_blank" title="观点"><em>●</em>[回答]</a>
+                                <a href="{:U('news/news',array('id'=>$vo['id']))}">{$vo['title']}</a>
+                            </li>
+                        </volist>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 新闻资讯常见问题结束 -->
+<!-- 征集中艺术家 名家鉴证实录开始 -->
+<div class="index-panel">
+    <div class="public-container cl">
+        <div class="index-panel-left">
+            <div class="index-panel-header cl">
+                <h3 class="fl"> 征集中艺术家</h3>
+                <a class="more-links fr" href="{:U('artist/artist_list')}">更多&gt;&gt;</a>
+                <a class="want-zj" href="{:U('apply/apply')}">我要征集</a>
+            </div>
+            <div class="index-panel-body">
+                <ul class="forensic-artist cl">
+                    <volist name="data" id="vo" offset="0" length='8'>
+                        <li>
+                            <!--  遍历   征集中艺术家 名家鉴证实录开始 -->
+                            <div class="img-artist">
+                                <a href="{:U('artist/Artist',array('yid'=>$vo['yid']))}">
+                                    <img src="__PUBLIC__/Upload/{$vo['aphoto']}" style="width: 160px;height: 160px">
+                                </a>
+                            </div>
+                            <div class="artist-info">
+                                <p class="zjmTit"><a href="{:U('artist/Artist',array('yid'=>$vo['yid']))}">{$vo['yname']}</a></p>
+                                <p class="zjmNum">已征集<span>{$vo['collect']}</span>件</p>
+                                <p class="zjFq">发起:<a href="javacript:;">华地收藏</a></p>
+                            </div>
+                        </li>
+                    </volist>
+
+                </ul>
+            </div>
+        </div>
+        <div class="index-panel-right">
+            <div class="index-panel-header cl">
+                <h3 class="fl">名家鉴证实录</h3>
+            </div>
+            <div class="index-panel-body">
+                <div class="forensics">
+                    <!-- top即将进行 -->
+                    <div class="picScroll-left">
+                        <div class="hd">
+                            <span class="">即将进行</span>
+                        </div>
+                        <div class="bd">
+                            <ul class="picList">
+                                <volist name="s_pd" id="vo" offset="0" length='1'>
+                                    <li>
+                                        <div class="pic">
+                                            <a class="cl" href="{:U('special/Special',array('aid'=>$vo['aid']))}" target="_blank">
+                                                <img class="fl author-img" src="__PUBLIC__/upload/{$vo['banner_pictures']}"/>
+                                                <div class="works-num fl">
+                                                    <p>待鉴定作品</p>
+                                                    <p><span class="num">{$vo['number']}</span>件</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <p>时间：<em>{$vo['starttime']}</em></p>
+                                            <p>地点：<em>上海华地艺术品备案中心（上海浦东新区 东方路）</em></p>
+                                        </div>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 精彩回顾 -->
+                    <div class="history-look cl">
+                        <div class="title">
+                            <h3>精彩回顾</h3>
+                        </div>
+                        <div class="pic">
+                            <a class="cl" href="{:U('special/Special',array('aid'=>$vo['aid']))}" target="_blank">
+                                <img class="fl author-img" src="__PUBLIC__/Upload/{$jianzheng_jieshu['banner_pictures']}"  />
+                                <div class="works-num fl">
+                                    <p>完成鉴定作品</p>
+                                    <p>真品：<span class="num">{$jianzheng_jieshu['genuine_product']}</span>件</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <volist name="result" id="vo" offset="0" length='2'>
+                                <li>
+                                    <a href="{:U('news/news',array('nid'=>$vo['nid']))}">
+                                        [{$vo['name']}]{$vo['ntitle']}</a>
+                                </li>
+                            </volist>
+                        </div>
+                        <a href="{:U('news/news_list')}" class="fr more-info">更多详情>></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 征集中艺术家 名家鉴证实录结束 -->
+<!-- 最新鉴证 名家鉴证实录开始 -->
+<div class="index-panel">
+    <div class="public-container cl">
+        <div class="index-panel-left">
+            <div class="index-panel-header cl">
+                <h3 class="fl">最新鉴证</h3>
+                <a class="more-links fr" href="{:U('work/works')}">更多&gt;&gt;</a>
+                <a class="want-zj" href="{:U('apply/apply')}">我要征集</a>
+            </div>
+            <div class="index-panel-body">
+                <!-- liebiao -->
+                <ul class="latest-appraisal cl">
+                    <volist name="goods" id="vo" offset="0" length='4'>
+                        <li>
+                            <div class="img-appraisal">
+                                <a href="{:U('details/details',array('gid'=>$vo['gid']))}">
+                                    <img src="__PUBLIC__/Upload/{$vo['banner']}" style="width: 160px;height: 160px">
+                                </a>
+                            </div>
+                            <div class="appraisal-info">
+                                <p class="title"><a href="{:U('details/details',array('gid'=>$vo['gid']))}">{$vo['name']}</a></p>
+                                <p class="status-appraisal">已鉴定</p>
+                            </div>
+                        </li>
+                    </volist>
+                </ul>
+                <!-- 已在线鉴定 -->
+                <div class="instance cl">
+                    <div class="instance-left fl">
+                        <div class="insTit">
+                            <span>已在线鉴定</span>
+                        </div>
+                        <ul class="txtlist">
+                            <volist name="chushen" id="vo" offset="0" length="6">
+                                <li class="cl">
+                                    <em>●</em>
+                                    <a href="{:U('details/details',array('gid'=>$vo['gid']))}" target="_blank" title="{$vo['auther']}《{$vo['cname']}》">{$vo['yname']}《{$vo['name']}》</a><span class="fr">已鉴定</span>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                    <div class="instance-right fr">
+                        <div class="insTit">
+                            <span>已在线鉴定</span>
+                        </div>
+                        <ul class="txtlist">
+                            <volist name="chushen" id="vo" offset="7" length="12">
+                                <li class="cl">
+                                    <em>●</em>
+                                    <a href="{:U('details/details',array('gid'=>$vo['gid']))}" target="_blank" title="{$vo['auther']}《{$vo['cname']}》">{$vo['yname']}《{$vo['name']}》</a><span class="fr">已鉴定</span>
+                                </li>
+                            </volist>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="index-panel-right">
+            <div class="index-panel-header cl">
+                <h3 class="fl"><a href="{:U('work/works')}">已初审精品赏析</a></h3>
+            </div>
+            <div class="index-panel-body">
+                <div class="show-works">
+                    <ul class="cl">
+                        <volist name="chushen" id="vo" offset="0" length="4">
+                            <li>
+                                <a href="{:U('details/details',array('gid'=>$vo['gid']))}">
+                                    <img src="__PUBLIC__/Upload/{$vo['banner']}" style="width: 160px;height: 160px">
+                                    <span class="title">{$vo['name']}</span>
+                                </a>
+                            </li>
+                        </volist>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 最新鉴证 名家鉴证实录结束 -->
+<!-- 现场图集开始 -->
+<div class="index-panel">
+    <div class="public-container">
+        <div class="index-panel-header">
+            <h3 class="fl"><a href="{:U('photo/photo_list')}">现场图集</a></h3>
+        </div>
+        <div class="index-panel-body">
+            <ul class="img-box cl">
+                <volist name="tuji" id="vo" offset="0" length="10">
+                    <li>
+                        <a href="{:U('photo/photo',array('id'=>$vo['id']))}">
+                            <img src="__PUBLIC__/Upload/{$vo['banner']}" style="width: 160px;height: 160px">
+                        </a>
+                    </li>
+                </volist>
+            <!--    <li>
+                    <a href="{:U('photo/photo_list')}">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="{:U('photo/photo_list')}">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="{:U('photo/photo_list')}">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="{:U('photo/photo_list')}">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>
+                <li>
+                    <a href="javacript:;">
+                        <img src="http://dummyimage.com/220x220/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 现场图集结束 -->
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!-- 底部结束 -->
+</body>
+
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/js/common.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+jQuery("#demo1").slide({
+    mainCell: ".bd ul",
+    effect: "top",
+    autoPlay: true,
+    triggerTime: 0
+});
+</script>

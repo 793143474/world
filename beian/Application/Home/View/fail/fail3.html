@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>鉴证备案——提交失败</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="网站描述">
+    <meta name="author" content="heyunqiang99@163.com">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+    <style>
+    	.box{
+    		overflow: hidden;
+    		min-height: 600px;
+    		margin: auto;
+    		margin-top: 30px;
+    		width: 1200px;
+    		
+    	}
+    	.box_nr{
+    		overflow: hidden;
+    		border: 1px solid #DCDCDC;
+    		padding: 50px;
+    		text-align: center;
+    	}
+    	.box_nr h3{
+    		font-size: 24px;
+    		line-height: 64px;
+    		color: #333333;
+    	}
+    	.box_nr p{
+    		color: #666666;
+    		line-height: 48px;
+    		font-size: 18px;
+    		height: 48px;
+    	}
+    	.a{
+    		overflow: hidden;
+    		text-align: center;
+    	}
+    	.a a{
+    		display: inline-block;
+    		margin:0 20px;
+    		line-height: 32px;
+    		font-size: 16px;
+    	}
+    </style>
+</head>
+
+<body>
+<!-- 顶部开始 -->
+<div class="public-header cl">
+    <include file="Common:head_top" />
+    <div class="header-nav">
+        <div class="public-container cl">
+            <ul class="nav-mian">
+                <li><a href="{:U('index/index')}">首页</a></li>
+                <li><a href="{:U('special/special_list')}">鉴证专场</a></li>
+                <li ><a href="{:U('artist/artist_list')}">艺术家</a></li>
+                <li><a href="{:U('work/works')}">作品</a></li>
+                <li class="on"><a href="{:U('union/union')}">诚信联盟</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+<div class="box">
+	<div class="box_nr">
+		<h3>提交失败!</h3>
+		<p>{$aa[0]}</p>
+		<div class="a">
+			<a href="{:U('Mechanism/mechanism')}">重新填写</a><a href="{:U('index/index')}">返回首页</a>
+		</div>
+	</div>
+</div>
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!-- 底部结束 -->
+</body>
+
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript">
+jQuery("#demo1").slide({
+    mainCell: ".bd ul",
+    effect: "top",
+    autoPlay: true,
+    triggerTime: 0
+});
+jQuery(".picScroll-left").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    autoPage: true,
+    effect: "left",
+    autoPlay: true,
+    vis: 3,
+    trigger: "click"
+});
+</script>

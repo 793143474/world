@@ -1,0 +1,203 @@
+
+.list_nav{
+	padding: 15px;
+	overflow: hidden;
+	background: url(../img/nav_two.jpg) no-repeat;
+	margin-bottom: 30px;
+}
+.list_nav strong{
+	float: left;
+    line-height: 30px;
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 30px;
+}
+.sort_one{
+	float: left;
+	overflow: hidden;
+}
+.sort_one span{
+	float: left;
+	width: 80px;
+	height: 28px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.3);
+	line-height: 28px;
+	text-align: center;
+	margin-right: 20px;
+}
+.sort_one span:hover{
+	border: 1px solid #FFFFFF;
+}
+.sort_one span.active{
+	border: 1px solid #FFFFFF;
+}
+.sort_one span a{
+	color: #FFFFFF;
+	font-size: 16px;
+	display: block;
+	width: 80px;
+	height: 28px;
+}
+.sort_one span a:hover{
+	text-decoration: none;
+}
+.screen{
+	float: right;
+	height: 30px;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+.screen input{
+	float: left;
+	width: 240px;
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+	border: none;
+	background: none;
+}
+.screen button{
+	float: left;
+	width: 80px;
+	background: #CCCCCC;
+	color: #333333;
+	height: 30px;
+	font-size: 14px;
+	cursor: pointer;
+}
+/*艺术家列表*/
+.artist_list{
+	overflow: hidden;
+	width: 1235px;
+}
+.artist_list li{
+	float: left;
+	width: 180px;
+	height: 280px;
+	border: 1px solid #DCDCDC;
+	margin-right: 35px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding: 15px;
+}
+.artist_list li:hover{
+	border: 1px solid #EE572C;
+}
+.artist_Pic{
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+.artist_Pic img{
+	max-height: 180px;
+	max-height: 180px;
+}
+.artist_list li h3{
+	line-height: 36px;
+	font-size: 16px;
+	color: #333333;
+	font-weight: bolder;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.artist_list li p{
+	color: #666666;
+	line-height: 24px;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.artist_list li p span{
+	color: #EE572C;
+	font-weight: bolder;
+	margin: 0 3px;
+}
+.artist_list li a:hover{
+	text-decoration: none;
+}
+/*页码*/
+.layui-laypage{
+	float: right;
+	margin-right: 30px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+	background: #EE572C;
+}
+/*专场列表*/
+.special_list{
+	overflow: hidden;
+	width: 1240px;
+}
+.special_list li{
+	float: left;
+	width: 540px;
+	height: 160px;
+	border: 1px solid #DCDCDC;
+	margin-right: 40px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding: 19px;
+}
+.special_list li:hover{
+	border: 1px solid #EE572C;
+}
+.special_Pic{
+	float: left;
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	margin-right: 30px;
+}
+.special_Pic img{
+	max-height: 160px;
+	max-height: 160px;
+}
+.special_tit{
+	float: left; 
+	width: 350px;
+	overflow: hidden;
+}
+.special_tit h3{
+	line-height: 36px;
+	font-size: 16px;
+	color: #333333;
+	font-weight: bolder;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-bottom:50px;
+}
+.special_tit p{
+	color: #666666;
+	line-height: 24px;
+	text-align: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.special_tit p span:first-child{
+	float: left;
+	width: 80px;
+	text-align:justify; 
+	text-justify:distribute-all-lines; 
+	text-align-last:justify; 
+	color: #555555;
+}
+.special_tit p span{
+	color: #999999;
+	text-align: left;
+	float: left;
+	width: 270px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.special_list li a:hover{
+	text-decoration: none;
+}

@@ -1,0 +1,208 @@
+.mian_Box{
+	width: 1200px;
+	margin: auto;
+}
+.dress{
+	margin: 20px 0;
+	overflow: hidden;
+}
+.news_main{
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.news_left{
+	float: left;
+	width: 738px;
+	border: 1px solid #DCDCDC;
+	padding: 20px 70px;
+	margin-right: 40px;
+	overflow: hidden;
+}
+.news_right{
+	float: left;
+	width: 280px;
+	overflow: hidden;
+}
+/**/
+.news_nr{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.news_nr h1{
+	line-height: 48px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #999999;
+	margin-bottom: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.news_tit{
+	line-height: 22px;
+	color: #999999;
+	margin-bottom: 30px;
+}
+.news_tit span{
+	margin-right: 15px;
+}
+.news_keywords{
+	background: #f1f2f6;
+	padding:10px 20px ;
+	color: #999999;
+	margin-bottom: 20px;
+}
+.news_keywords strong{
+	color: #555555;
+}
+.news_p{
+	overflow: hidden;
+	text-align: center;
+}
+.news_p p{
+	text-align: justify;
+	text-indent: 2em;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+.news_p img{
+	max-width: 100%;
+	margin-bottom: 15px;
+}
+.news_p h4{
+	font-size: 16px;
+	color: #555555;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+.Notes{
+	text-align: justify;
+	line-height: 24px;
+	color: #999999;
+}
+.Notes strong{
+	color: #333333;
+}
+.search_keywords{
+	overflow: hidden;
+	margin: 30px 0;
+}
+.keywords{
+	float: left;
+	width: 50%;
+	line-height: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.fenxiang{
+	float: right;
+	width: 300px;
+}
+.news_about{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.news_about h2{
+	border-bottom: 2px solid #555555;
+	line-height: 36px;
+	font-size: 18px;
+	text-align: left;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+.news_about li{
+	overflow: hidden;
+	height: 32px;
+	line-height: 32px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+.news_about li a{
+	float: left;
+	width: 560px;
+	display: block;
+}
+.news_about li span{
+	float: right;
+	width: 140px;
+	font-size: 14px;
+	color: #999999;
+}
+/*right*/
+.right_item{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.right_item h2{
+	border-bottom: 2px solid #555555;
+	line-height: 36px;
+	font-size: 18px;
+	text-align: left;
+	font-weight: bolder;
+}
+.right_item ul{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.right_item ul li em{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: #CCCCCC;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+}
+.right_item ul li{
+	padding: 10px;
+	line-height: 22px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.right_item ul li a{
+	font-size: 14px;
+}
+.right_item ul li a:hover em{
+	background: #EE572C;
+	color: #FFFFFF;
+}
+.right_item ul li a:hover{
+	text-decoration: none;
+}
+.two ul li a:hover em{
+	background: #EE572C;
+	color: #333;
+}
+.two ul li a em{
+	background: #CCCCCC;
+	color: #FFFFFF;
+}
+.right_item ul.img{
+	overflow: hidden;
+}
+.right_item ul.img li{
+	display: block;
+	margin-top: 20px;
+	position: relative;
+	width: 280px;
+	height: 280px;
+	overflow: hidden;
+	border: none;
+	padding: 0;
+}
+.right_item ul.img li img{
+	width: 280px;
+	height: 280px;
+}
+.right_item ul.img li p{
+	width: 100%;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: rgba(51,51,51,0.5);
+	margin-top: -32px;
+	position: absolute;
+	z-index: 99;
+}

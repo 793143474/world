@@ -1,0 +1,448 @@
+/**
+ * @date:  2017.06.13
+ * @name:  公共样式
+ * @author heyunqiang99@163.com
+**/
+
+/* css reset
+ ============================================================================ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea,
+th,
+td,
+a,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 设置默认字体 */
+
+body {
+    font-family: 'Microsoft Yahei','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color:#666;
+}
+
+a:hover {
+    color:#ee572c;
+    text-decoration: underline;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+ul,
+ol,
+dl,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
+input,
+select,
+textarea,
+button {
+    border: none;
+    outline: none;
+}
+
+/* css类组件
+ ============================================================================ */
+.cl:after,
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '';
+}
+.cl,
+.clearfix {
+    zoom: 1;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+/* 布局
+ ============================================================================ */
+.public-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 顶部公共部分 logo 搜索 登录注册 导航
+ ============================================================================ */
+.public-header .header-topbar {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #f1f1f1;
+    color:#666;
+    -moz-box-shadow:0px 1px 5px #ccc;
+    -webkit-box-shadow:0px 1px 5px #ccc;
+    box-shadow:0px 1px 5px #ccc;
+}
+/* topbar*/
+.header-topbar .header-links a{
+    margin-right: 25px;
+    color:#666;
+}
+.header-topbar .header-links a:hover{
+    color:#ee572c;
+}
+.header-menu .item{
+    position: relative;
+    float: left;
+    width: 102px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+}
+.header-menu .item-w300{
+    border-right: 1px solid #ccc;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.header-menu .item-w300 a{
+    color:#666;
+}
+.header-menu .item-w300:hover{
+    background: #fff;
+}
+.header-menu .item-w300:hover a{
+    color:#ee572c;
+}
+.header-menu .item a{
+    color:#666;
+    display: inline-block;
+}
+.header-menu .item a:hover{
+    color:#ee572c;
+}
+.header-menu .login a,.header-menu .afterlogin a{
+    margin-left: 10px;
+}
+.header-menu .login span,.header-menu .afterlogin span{
+     color:#ee572c;
+}
+.header-menu .item .nav-more{
+    position: relative;
+}
+.header-menu .item .nav-more::before{
+    position: absolute;
+    top: 18px;
+    left: 60px;
+    content:'';
+    width: 9px;
+    height: 5px;
+    background-image: url("../img/icon-arrow-bottom.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.header-menu .item .sub-nav{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 999;
+    width: 102px;
+    margin-left: -1px;
+    display: none;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.header-menu .item:hover{
+    background: #fff;
+}
+.header-menu .item:hover .nav-more::before{
+    background-position:0 -7px;
+}
+.header-menu .item:hover .sub-nav{
+    display: block;
+    background: #fff;
+}
+/* logo和搜索*/
+.header-logo-search {
+    height: 145px;
+}
+.header-logo-search .header-logo{
+    width: 242px;
+    height: 105px;
+    margin-top: 15px;
+    background: url("../img/cang_logo.png") no-repeat;
+}
+.header-logo-search h1{
+    height: 90px;
+    line-height: 90px;
+    font-size:18px;
+    color:#333;
+    margin-top: 30px;
+    border-left:1px solid #333;
+    margin-left: 50px;
+    padding-left: 50px;
+}
+
+/*导航*/
+.header-nav{
+    width: 100%;
+    height: 40px;
+    background: #ebebeb;
+}
+.header-nav .public-container{
+    position: relative;
+}
+.header-nav .nav-mian{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.header-nav .nav-mian li {
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#333;
+    font-size:18px;
+}
+.header-nav .nav-mian li:hover{
+    background: #ee572c;
+}
+.header-nav .nav-mian li:hover a{
+    color:#fff;
+    text-decoration: none;
+}
+.header-nav .nav-mian li a{
+    color:#333;
+    display:block ;
+    width: 100%;
+    height: 100%;
+}
+.header-nav .nav-mian li.on{
+    background: #ee572c;
+}
+.header-nav .nav-mian li.on a{
+   color:#fff;
+}
+/* 底部公共
+ ============================================================================ */
+.public-footer{
+    width: 100%;
+    height: 210px;
+    background: #d0d0d0;
+}
+.footer-left .footer-logo{
+    display: block;
+    width: 161px;
+    height: 70px;
+    background: url("../img/footer-logo.png") no-repeat;
+    margin:17px 0 20px 0;
+}
+.footer-left .footer-nav{
+    margin-bottom: 20px;
+}
+.footer-left .footer-nav li{
+    float: left;
+}
+.footer-left .footer-nav li a:hover{
+    color:#ee572c;
+}
+.footer-left .footer-nav li.first a{
+    padding-left: 0;
+}
+.footer-left .footer-nav li.last a{
+    border-right:none;
+}
+.footer-left .footer-nav li a{
+    display: inline-block;
+    color:#333;
+    line-height: 16px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right:1px solid #333;
+}
+.footer-copyrights{
+    margin-bottom: 12px;
+}
+.footer-copyrights li{
+    float: left;
+    font-size:12px;
+    line-height: 12px;
+    padding: 0 10px;
+    border-right:1px solid #333;
+    color:#333;
+}
+.footer-copyrights li.first{
+     padding-left: 0;
+}
+.footer-copyrights li.first a{
+    color:#333;
+}
+.footer-copyrights li.first a:hover{
+    color:#ee572c;
+}
+.footer-copyrights li.last{
+     border-right: none;
+}
+/*二维码*/
+.footer-right dl{
+    display: inline-block;
+    width: 130px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.footer-right dl dt{
+    width: 130px;
+    height: 130px;
+}
+.footer-right dl dt.footer-erweima01{
+    background: url("../img/footer-erweima.png") no-repeat;
+}
+.footer-right dl dt.footer-erweima02{
+    background: url("../img/footer-erweima.png") no-repeat;
+}
+.footer-right dl dd{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 公共标题
+ ============================================================================ */
+.index-panel .index-panel-left{
+    width: 800px;
+    float: left;
+}
+.index-panel .index-panel-right{
+    width: 360px;
+    float: right;
+}
+
+.index-panel .index-panel-header {
+    margin-top: 25px;
+    position: relative;
+    margin-bottom: 36px;
+    height: 54px;
+    line-height: 54px;
+    border-bottom: 1px solid #666666;
+}
+.index-panel .index-panel-header h3 {
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+.index-panel .index-panel-header .want-zj{
+    position: absolute;
+    top: 15px;
+    right: 95px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    background: #ee572c;
+    color:#fff;
+    text-align: center;
+}
+.mian_Box{
+	width: 1200px;
+	margin: auto;
+}
+.dress{
+	margin: 20px 0;
+	overflow: hidden;
+}
+/*页码*/
+.layui-laypage{
+	float: right;
+	margin-right: 30px;
+}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+	background: #EE572C;
+}
+
+/*分页*/
+.content .pages{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
+.content .pages .num,.content .pages .prev,.content .pages .next{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+
+}
+.content .pages .current{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #EE572C;
+    color: #fff;
+    font-size: 12px;
+}
+.content .pages .rows{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    border: 1px solid #e2e2e2;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 -1px 5px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+}

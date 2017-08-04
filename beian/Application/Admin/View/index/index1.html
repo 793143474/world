@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>后台管理系统</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/style.css">
+<!--[if lt IE 9]>
+<script src="__PUBLIC__/admin/js/html5.js"></script>
+<![endif]-->
+<script src="__PUBLIC__/admin/js/jquery.js"></script>
+<script src="__PUBLIC__/admin/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	(function($){
+		$(window).load(function(){
+			
+			$("a[rel='load-content']").click(function(e){
+				e.preventDefault();
+				var url=$(this).attr("href");
+				$.get(url,function(data){
+					$(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+					//scroll-to appended content 
+					$(".content").mCustomScrollbar("scrollTo","h2:last");
+				});
+			});
+			$(".content").delegate("a[href='top']","click",function(e){
+				e.preventDefault();
+				$(".content").mCustomScrollbar("scrollTo",$(this).attr("href"));
+			});
+		});
+	})(jQuery);
+</script>
+</head>
+<body>
+<include file="Common:head_banner" />
+
+<section class="rt_wrap content mCustomScrollbar">
+    <div class="rt_content">
+        <div class="page_title">
+            <h2 class="fl">网站动态</h2>
+        </div>
+        <section>
+            <ul class="ulColumn2">
+                <form >
+                    <!--<li>
+                        <span class="item_name" style="width:120px;">添加logo图：</span>
+                        <input type="text" class="textbox textbox_295" placeholder="新闻标题..." name="ntitle"/>
+                        <notempty name="Think.session.info1">
+                            {$Think.session.info1}
+                        </notempty>
+                    </li>-->
+                    <volist name="data" id="vo" offset="0" length="1">
+                    <li>
+                        <span class="item_name" style="width:120px ;">公司名：</span>
+                        <input class="textbox" type="text" value="{$vo['name']}" style="width: 160px" onfocus="this.blur()"/>
+                    </li>
+                    <li>
+                        <span class="item_name" style="width:120px;">添加logo图：</span>
+                        <img src="__PUBLIC__/Upload/{$vo['logo']}" style="width: 242px;height: 105px;border: 1px solid #b0b0b0">
+                    </li>
+                    <li>
+                        <span class="item_name" style="width:120px;">水印：</span>
+                        <img src="__PUBLIC__/Upload/{$vo['shuiyin']}" style="width: 242px;height: 100px;border: 1px solid #b0b0b0">
+                    </li>
+                        </volist>
+                </form>
+            </ul>
+        </section>
+    </div>
+</section>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

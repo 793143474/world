@@ -1,0 +1,233 @@
+body {
+    width: 100%;
+    min-height: 600px;
+    background: url(../images/logion_bg.jpg) no-repeat top center;
+}
+
+.box {
+    overflow: hidden;
+    width: 1200px;
+    min-height: 560px;
+    margin: auto;
+}
+
+.logion {
+    float: right;
+    overflow: hidden;
+    width: 320px;
+    height: 310px;
+    margin-top: 40px;
+    padding: 20px 30px;
+    padding-bottom: 20px;
+    background: url(../images/logion_box.jpg) no-repeat top center;
+}
+
+.logion_tit {
+    line-height: 24px;
+    overflow: hidden;
+}
+
+.logion_tit span {
+    font-weight: bolder;
+    float: left;
+    color: #ee572c;
+}
+
+.logion_tit p {
+    float: right;
+    width: 240px;
+    text-align: right;
+    color: #666;
+}
+
+.logion_tit p a {
+    color: #08c;
+}
+
+.Prompt {
+    overflow: hidden;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.Prompt_box {
+    line-height: 22px;
+    display: none;
+    overflow: hidden;
+    height: 22px;
+    color: #e4393c;
+    border: 1px solid #f8b1a7;
+    background: #ffebeb;
+}
+
+.Prompt_box .icon {
+    float: left;
+    width: 17px;
+    height: 17px;
+    margin-top: 2px;
+    margin-left: 10px;
+    background: url(../images/jian.png) no-repeat center center;
+}
+
+.Prompt_box p {
+    line-height: 22px;
+    float: right;
+    width: 260px;
+}
+
+.user_input {
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+}
+
+.user_input .icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background: url(../images/men.jpg) no-repeat center center;
+}
+
+.user_input label {
+    line-height: 40px;
+    float: left;
+    width: 40px;
+    text-align: left;
+    color: #333;
+}
+
+.user_input input {
+    line-height: 24px;
+    float: left;
+    width: 220px;
+    height: 24px;
+    margin-top: 6px;
+}
+
+.key_input {
+    overflow: hidden;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.key_input .icon {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background: url(../images/key.jpg) no-repeat center center;
+}
+
+.key_input label {
+    line-height: 40px;
+    float: left;
+    width: 40px;
+    text-align: left;
+    color: #333;
+}
+
+.key_input input {
+    line-height: 24px;
+    float: left;
+    width: 220px;
+    height: 24px;
+    margin-top: 6px;
+}
+
+.remember {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.remember a {
+    line-height: 24px;
+    float: left;
+    text-indent: 1em;
+    color: #08c;
+}
+
+.remember p {
+    float: right;
+    width: 200px;
+    text-align: right;
+}
+
+.remember p input {
+    float: right;
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
+.submit {
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #ee572c;
+}
+
+.submit:hover {
+    background: #d64e27;
+}
+
+a.submit {
+    font-size: 18px;
+    line-height: 40px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #ee572c;
+}
+
+.logion_more {
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.logion_more span {
+    line-height: 26px;
+    float: left;
+    overflow: hidden;
+}
+
+.logion_more a {
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin: 0 10px;
+}
+
+.qq {
+    background: url(../images/qq.png);
+}
+
+.weixin {
+    background: url(../images/weixin.png);
+}
+
+.weibo {
+    background: url(../images/weibo.png);
+}
+
+.qq:hover {
+    background: url(../images/qqh.png);
+}
+
+.weixin:hover {
+    background: url(../images/weixinh.png);
+}
+
+.weibo:hover {
+    background: url(../images/weiboh.png);
+}

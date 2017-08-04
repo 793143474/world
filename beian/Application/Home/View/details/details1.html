@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>鉴证备案——作品详情</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="网站描述">
+    <meta name="author" content="heyunqiang99@163.com">
+    <meta name="renderer" content="webkit">
+    <link rel="shortcut icon" href="__PUBLIC__/home/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/common.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/detalis.css" />
+</head>
+
+<body>
+<!-- 顶部开始 -->
+<div class="public-header cl">
+    <include file="Common:head_top" />
+    <div class="header-nav">
+        <div class="public-container cl">
+            <ul class="nav-mian">
+                <li><a href="{:U('index/index')}">首页</a></li>
+                <li><a href="{:U('special/Special_list')}">鉴证专场</a></li>
+                <li class="on"><a href="{:U('artist/artist_list')}">艺术家</a></li>
+                <li><a href="{:U('work/works')}">作品</a></li>
+                <li><a href="{:U('union/union')}">诚信联盟</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 顶部结束 -->
+
+<div class="appraisal">
+	<div class="dress">
+		<a href="#">鉴证备案</a>&gt;
+		<a href="#">艺术家</a>&gt;
+		<span>艺术家作品征集</span>
+	</div>
+	<div class="appraisal_top">
+		<div class="appraisal_Pic">
+			<ul class="big_pic">
+                <volist name="data[pictures]" id="vo">
+					<li>
+						<div class="img_box">
+							<img src="__PUBLIC__/Upload{$vo}">
+						</div>
+						<span></span>
+					</li>
+				</volist>
+			</ul>
+			<ul class="small_pic">
+				<volist name="data[pictures]" id="vo">
+					<li>
+						<div class="img_box">
+							<img src="__PUBLIC__/Upload{$vo}">
+						</div>
+						<span></span>
+					</li>
+				</volist>
+			</ul>
+		</div>
+		<div class="app_txt">
+			<div class="txt_top">
+				<h1>藏品名称：{$data['name']}</h1>
+				<p><span>备案编号：</span>{$data['bianhao']}</p>
+				<p><span>备案时间：</span>{$data['btime']}</p>
+				<p><span>鉴定结果：</span>{$data['result']}</p>
+				<p><span>鉴定机构：</span>华地文化</p>
+			</div>
+			<div class="txt_bottom">
+				<p><span>藏品来源：</span>{$data['laiyuan']}</p>
+				<p><span>藏品年限：</span>{$data['cztime']}</p>
+				<p><span>藏品类别：</span>{$data['result']}</p>
+				<p><span>藏品规格：</span>{$data['size']}</p>
+			</div>
+		</div>
+	</div>
+	<div class="appraisal_bottom">
+		<div class="app_nav">
+			<span>鉴定证书</span>
+		</div>
+		<div class="certificate">
+			<volist name="data[certificate]" id="vo">
+				<img src="__PUBLIC__/Upload{$vo}">
+			</volist>
+		</div>
+	</div>
+</div>
+<!-- 底部开始 -->
+<include file="Common:tail" />
+<!-- 底部结束 -->
+</body>
+
+</html>
+<script src="__PUBLIC__/home/lib/jquery.min.js"></script>
+<script src="__PUBLIC__/home/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/detalis.js" ></script>

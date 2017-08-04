@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>鉴证备案-雅昌艺术网——中国艺术品门户网站</title>
+    <meta name="description" content="  "/>
+    <meta name="keywords" content="  "/>
+    <link href="__PUBLIC__/admin/css/common.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="__PUBLIC__/admin/css/detail.css" type="text/css" rel="stylesheet" media="all"/>
+    <link href="__PUBLIC__/admin/css/s.css" type="text/css" rel="stylesheet" media="all"/>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/hover.js"></script>
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="__PUBLIC__/admin/js/DD_belatedPNG.js"></script>
+    <script>
+        DD_belatedPNG.fix('#loginBar .home');
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+    	function DrawImage(element, width, height, imgWidth, imgHeight) {
+            element = $(element);
+            element.removeAttr("width").removeAttr("height");
+            var imgWidth = $(element).outerWidth(),
+                imgHeight = $(element).outerHeight();
+            if (imgWidth > imgHeight * width / height) {
+                if (imgWidth > width) {
+                    element.attr({
+                        "width": width
+                    });
+                }
+            } else {
+                if (imgHeight > height) {
+                    element.attr({
+                        "height": height
+                    });
+                }
+            }
+
+            imgWidth = $(element).outerWidth();
+            imgHeight = $(element).outerHeight();
+            element.css({
+                "margin-left": (width - imgWidth) / 2 + "px",
+                "margin-top": (height - imgHeight) / 2 + "px"
+            });
+        }
+
+        function sta(status,author,page){
+            if(author !='' && page !=''){
+                window.location='http://beian.artron.net/specail?status='+status+'&Author='+author+'&page='+page;
+            }else if(author !='' && page ==''){
+                window.location='http://beian.artron.net/specail?status='+status+'&Author='+author;
+            }else if(author == '' && page !=''){
+                window.location='http://beian.artron.net/specail?status='+status+'&page='+page;
+            }else{
+                window.location='http://beian.artron.net/specail?status='+status;
+            }
+        }
+
+
+        function search_work() {
+           var keywordes = $('#keyword').val();
+            if (keywordes.replace(' ', '') == '' || keywordes == '请输入艺术家姓名') {
+                alert('请填写艺术家姓名！');
+                $('#keyword').focus();
+            } else {
+                window.location = 'http://beian.artron.net/specail?Author=' + encodeURI(keywordes);
+            }
+        }
+    </script>
+</head>
+<!--吊顶begin-->
+<div id="topFix">
+    <link href="__PUBLIC__/admin/css/common.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/admin/css/newTop.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/admin/js/newLogin.js"></script>
+<div id="sso_topbar" class="sso_bg">
+    <div class="sso_pw fix">
+        <div id="sso_loginBar">
+        	<a target="_blank" title="雅昌首页" href="#" class="sso_home sso_btn">雅昌首页</a>
+            <div class="sso_optionInput">
+            	
+                <script type="text/javascript"
+                    src="__PUBLIC__/admin/js/sso.js"></script>
+                <script type="text/javascript">
+                    var sso = new sso();
+                </script>
+                <!-- 登录后 -->
+                <div id="member_after_login" style="display:none;">
+                    <span class="sso_wel"><b></b></span><a target="_self" class="sso_login" href="javascript:void(0)" onclick="sso.go(this, 'logout')">退出</a>
+                </div>
+                <!-- 登录前 -->
+                <div id="member_before_login" style="display:none;">
+                    <span class="sso_wel sso_fl">您好！</span><a href="javascript:;" onclick="sso.go(this, 'login')" class="sso_login sso_fl">请登录</a><a target="_self" href="javascript:void(0)" onclick="sso.go(this, 'register')" class="sso_reg sso_fl">免费注册</a>
+                </div>
+                <script type="text/javascript">
+                    $.ajax({
+                        type : "get",
+                        async : true,
+                        url : "http://passport.artron.net/status",
+                        dataType : "jsonp",
+                        jsonp : "jsonpCallback",
+                        success : function(data) {
+                            if (data.status == 1) {
+                                $("#member_after_login").find("b").html(
+                                        data.username);
+                                $("#member_after_login").show();
+								$(".sso_news").show();
+                                $(".sso_buying").addClass("sso_buyLog");
+                                if(data.orderSum > 0){
+                                    $(".sso_buyLog").children("span").addClass("sso_buyNum").html("（"+data.orderSum+"）");
+                                }else{
+									$(".sso_buyLog").children("span").removeClass("sso_buyNum").html("（0）");
+								}
+                            } else {
+                                $("#member_before_login").show();
+                                $(".sso_buying").removeClass("sso_buyLog");
+                            }
+                        },
+                        error : function() {
+                        }
+                    });
+                </script>
+            </div>
+            <div class="sso_select sso_myArtron">
+                <div class="sso_site">
+                    <div class="sso_dropdown oh">
+                        <a class="sso_siteTit icon-artron" href="#" title="我的雅昌" target="_blank">我的雅昌</a><b class="sso_dropBtn"></b>
+                    </div>
+                    <ul class="sso_siteList">
+                        <li><a class="icon-buy" href="#" target="_blank">求购作品</a></li>
+                        <li><a class="icon-release" href="#" target="_blank">发布作品</a></li>
+                        <li><a class="icon-attention" href="#" target="_blank">我的关注</a></li>
+                        <li><a class="icon-collect" href="#" target="_blank">我的收藏</a></li>
+                        <li><a class="icon-SetUp" href="#" target="_blank">服务中心</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a class="sso_buying" href="#" target="_blank">求购单<span>（0）</span></a>
+            <a class="sso_news" href="#" target="_blank">消息<!--<span>（0）</span>--></a>
+        </div>
+        <div class="sso_other">
+            <a href="#" title="帮助中心" target="_blank">帮助中心</a>
+        </div>
+        <div class="sso_select sso_artSite">
+            <div class="sso_site">
+                <div class="sso_dropdown oh">
+                    <a target="_self" class="sso_siteTit" href="#" title="雅昌子站">雅昌子站</a><b class="sso_dropBtn"></b>
+                </div>
+                <ul style="overflow: hidden;" class="sso_siteList">
+                    <li><a href="#" target="_blank">华南站</a></li>
+                    <li><a href="#" target="_blank">华东站</a></li>
+                    <!--<li><a href="#" target="_blank">福建站</a></li>-->
+                    <li><a href="#" target="_blank">广东站</a></li>
+                    <!--<li><a href="#" target="_blank">江西站</a></li>-->
+                    <!--<li><a target="_blank" href="#">河南站</a></li>-->
+                    <li><a target="_blank" href="#">山西书画</a></li>
+                    <li><a href="#" target="_blank">图书网</a></li>
+                    <li><a target="_blank" href="#">英文站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sso_topTel">
+            <a href="#" target="_blank"><b class="sso_fl">客服热线：</b><span>400 669 0999</span></a>
+        </div>
+        <div class="sso_select sso_homeSer">
+            <div class="sso_site">
+                <div class="sso_dropdown oh">
+                    <a class="sso_siteTit" style="color:#666;">主页服务</a><b class="sso_dropBtn"></b>
+                </div>
+                <ul class="sso_siteList">
+                    <li class="first"><span class="sso_serArist"><a href="#" target="_blank">艺术家</a></span><span class="sso_serGal"><a href="#" target="_blank">画廊</a><i>/</i><a href="#" target="_blank">古玩店</a></span><span class="sso_serAuc"><a href="#" target="_blank">拍卖</a></span></li>
+                    <li><span class="sso_serArist"><a href="#" target="_blank">特权介绍</a></span><span class="sso_serGal"><a href="#" target="_blank">特权介绍</a></span><span class="sso_serAuc"><a href="#" target="_blank">特权介绍</a></span></li>
+                    <li><span class="sso_serArist"><a href="#" target="_blank">现在开通</a></span><span class="sso_serGal"><a href="#" target="_blank">现在开通</a></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<!--吊顶end-->
+<!--导航beigin-->
+<link href="__PUBLIC__/admin/css/mininav.css" rel="stylesheet" type="text/css" />
+<div id="sso_inNav">
+        <ul class="sso_mainNav">
+            <li><a target="_blank" href="#">艺术家</a><a target="_blank" href="#">鉴证备案</a><a target="_blank" href="#">画廊</a><a target="_blank" href="#">古玩</a><a target="_blank" href="#">拍卖</a><a target="_blank" href="#">展览</a><a target="_blank" href="#">中国艺搜</a><a target="_blank" href="#">监测中心</a><a target="_blank" href="#">新闻</a><a target="_blank" href="#">观点</a><a target="_blank" href="#">视频</a><a target="_blank" href="#">摄影</a><a target="_blank" href="#">专题</a><a target="_blank" href="#">当代</a><a target="_blank" href="#">博客</a><a class="last" target="_blank" href="#">论坛</a></li>
+        </ul>
+        <ul class="sso_subNav">
+            <li><span class="sso_first"><a target="_blank" href="#">找画廊</a><a target="_blank" href="#">青州画廊</a></span><a href="#" target="_blank">油画</a><a href="#" target="_blank">紫砂</a><a href="#" target="_blank">当代水墨</a><a href="#" target="_blank">陶瓷</a><a href="#" target="_blank">砚台</a><a href="#" target="_blank">国画</a><a href="#" target="_blank">书法</a><a href="#" target="_blank">玉石</a><a href="#" target="_blank">古典家具</a><a href="#" target="_blank">版画</a><a href="#" target="_blank">雕刻</a></li>
+        </ul>
+    </div>
+<!--导航end-->
+<!--logo begin-->
+<div class="pw fix" id="top">
+
+        <div id="logo"><strong><a title="雅昌艺术网" href="#">雅昌艺术网</a></strong><a href="#" class="logoLink">雅昌鉴证备案</a>
+
+    <div class="logoTxt"><span>雅昌艺术品鉴证备案中心</span></div>
+
+  </div>
+
+        <div class="telp">400-669-0999</div>
+
+    </div>
+<!--logo end-->
+<div id="subNav">
+    <div class="level0">
+        <ul>
+            <li class=""><a href="#">首页</a></li>
+            <li class="current"><a href="#">鉴证专场</a></li>
+            <li class=""><a href="#">艺术家</a></li>
+            <li class=""><a href="#">作品</a></li>
+            <li class=""><a href="#" target="_blank">诚信联盟</a></li>
+        </ul>
+    </div>
+    <div class="levelList">
+        <div class="level1"></div>
+        <div class="level1 currentShow"></div>
+        <div class="level1"></div>
+        <div class="level1"></div>
+        <div class="level1"></div>
+    </div>
+</div>
+<div class="blackLine"></div>
+<div style="position:relative; z-index:10" class="pw fix">
+    <div class="location fl"><a href="#" class="lastLink">鉴证备案</a><strong>鉴证专场</strong>
+    </div>
+    <div class="search inSearch searchBox fix fr" id="minSearch">
+          <div id="sForm" class=""><a href="javascript:void(0);" class="sbtn" onclick="search_work()">搜索</a><div class="sRadius" style="">
+            <input id="keyword" name="keyword" class="sInput nobg"  value="请输入专场名称" type="text"></div>
+          </div>
+        </div>
+</div>
+<div class="pw">
+    <h2 class="bdtit z"><span class="titName fl">排序</span><a href="javascript:void(0);" class="titLinkA curr" onclick="javascript:sta('','','1');">全部</a><span class="line"></span><a href="javascript:void(0);" onclick="javascript:sta('1','','1');"class="titLinkA ">将要进行中</a><span class="line"></span><a href="javascript:void(0);" onclick="javascript:sta('2','','1');"class="titLinkA ">已结束</a></h2>
+    <div class="secList fix">
+                                                        <dl class="fix bg">
+                        <dt><a href="#" target="_blank"><img src="__PUBLIC__/admin/images/1472114585_651154.jpg" onload="javascript:DrawImage(this,160,160);" /></a></dt>
+                        <dd>
+                            <h3><a href="#" target="_blank">杨明义作品 北京鉴证备案专场</a></h3>
+                            <p class="fix"><span>鉴<i>证</i>人：</span><strong> 杨明义</strong></p>
+                            <p class="fix"><span>鉴证地点：</span><strong>北京雅昌鉴证备案中心</strong></p>
+                            <p class="fix"><span>鉴证时间：</span><strong class="fmE">2016-11-08</strong></p>
+                        </dd>
+                    </dl>
+                                                                <dl class="fix bg mr0">
+                        <dt><a href="#" target="_blank"><img src="__PUBLIC__/admin/images/2012092116241731057.jpg" onload="javascript:DrawImage(this,160,160);" /></a></dt>
+                        <dd>
+                            <h3><a href="#" target="_blank">赵绪成作品 北京站 鉴证备案专场</a></h3>
+                            <p class="fix"><span>鉴<i>证</i>人：</span><strong> 赵绪成</strong></p>
+                            <p class="fix"><span>鉴证地点：</span><strong>中国美术馆</strong></p>
+                            <p class="fix"><span>鉴证时间：</span><strong class="fmE">2016-08-24</strong></p>
+                    </dl>
+                                                                <dl class="fix bg">
+                        <dt><a href="#" target="_blank"><img src="__PUBLIC__/admin/images/2014042215490036944.jpg" onload="javascript:DrawImage(this,160,160);" /></a></dt>
+                        <dd>
+                            <h3><a href="#" target="_blank">范扬作品 北京鉴证备案专场</a></h3>
+                            <p class="fix"><span>鉴<i>证</i>人：</span><strong> 范扬</strong></p>
+                            <p class="fix"><span>鉴证地点：</span><strong>北京杏坛美术馆</strong></p>
+                            <p class="fix"><span>鉴证时间：</span><strong class="fmE">2016-08-16</strong></p>
+                        </dd>
+                    </dl>
+                                                                <dl class="fix bg mr0">
+                        <dt><a href="#" target="_blank"><img src="__PUBLIC__/admin/images/1417139215_849194.jpg" onload="javascript:DrawImage(this,160,160);" /></a></dt>
+                        <dd>
+                            <h3><a href="#" target="_blank">郭全忠作品  雅昌（西安）鉴证备案</a></h3>
+                            <p class="fix"><span>鉴<i>证</i>人：</span><strong> 郭全忠</strong></p>
+                            <p class="fix"><span>鉴证地点：</span><strong>西安市曲江区慈恩路66号 威斯汀酒店</strong></p>
+                            <p class="fix"><span>鉴证时间：</span><strong class="fmE">2016-04-26</strong></p>
+                    </dl>
+                                                                <dl class="fix bg">
+                        <dt><a href="#" target="_blank"><img src="__PUBLIC__/admin/images/2008122315452924820.jpg" onload="javascript:DrawImage(this,160,160);" /></a></dt>
+                        <dd>
+                            <h3><a href="#" target="_blank">关山月精品鉴证备案现场</a></h3>
+                            <p class="fix"><span>鉴<i>证</i>人：</span><strong>关山月家属、崇正拍卖专家团队</strong></p>
+                            <p class="fix"><span>鉴证地点：</span><strong>广州市天河区</strong></p>
+                            <p class="fix"><span>鉴证时间：</span><strong class="fmE">2016-04-24</strong></p>
+                        </dd>
+                    </dl>
+                                        </div>
+    <div class="page mt40">
+        <span> 上一页</span><a href='#'  class="cur">1</a><a href=?page=1 >下一页</a>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+<div class="pw joinInfo">
+    <!--友情链接-->
+    <p class="oh contact"><span>责任编辑：程立雪</span><span class="tel">010-80480998-780</span><a href="#" class="mail">clx@artron.net</a>
+    </p>
+</div>
+<!-- issue_public/footer.html -->
+<link href="__PUBLIC__/admin/css/footer.css" rel="stylesheet" type="text/css" />
+<div id="sso_bNav" class="bNav">
+<a style="background-image: none;" href="#" target="_blank">关于我们</a><a href="#" target="_blank">产品介绍</a><a href="#" target="_blank">人才招聘</a><a href="#" target="_blank">雅昌动态</a><a href="#" target="_blank">联系我们</a><a href="#" target="_blank">网站地图</a><a href="#" target="_blank">版权说明</a><a href="#" target="_blank">免责声明</a><a href="#" target="_blank">隐私权保护</a><a href="#" target="_blank">友情链接</a><a href="#" target="_blank">雅昌集团</a><a href="#" target="_blank">专家顾问</a><a href="#" target="_blank">法律顾问</a>
+</div>
+<div id="sso_copyright">
+  <p><span>Copyright Reserved 2000-2017</span>&nbsp;雅昌艺术网&nbsp;版权所有</p>
+  <p><a href="#" target="_blank">电信与信息服务业务经营许可证（粤）<span>B2-20030053</span></a><a href="#" target="_blank">广播电视制作经营许可证（粤）字第<span>717</span>号</a><a href="#" target="_blank">企业法人营业执照</a></p>
+  <p><a href="#" style="display:inline-block;" target="_blank"><img src="__PUBLIC__/admin/images/ghs.png" style="float:left;margin-right:5px"><span>京公网安备 11011302000792号</span></a><a href="#" target="_blank">粤<span>ICP</span>备<span>11054908</span>号-<span>15</span></a><a href="#" target="_blank">信息网络传播视听节目许可证<span>1909402</span>号</a><a href="#" target="_blank">互联网域名注册证书</a></p>
+  <p><a href="#" target="_blank">网络文化经营许可证文网文<span>［2009］086</span>号</a><a href="#" target="_blank">互联网出版许可证<span>［2010］445</span>号</a><a href="#" target="_blank">出版物经营许可证</a><a href="#" target="_blank">可信网站验证服务证书<span>2012040503023850</span>号</a></p>
+</div>
+<div id="anchor" style="bottom: 40px; margin-left: 510px;">
+    <div class="qrCode">
+      <b title="二维码"></b>
+      <div class="qr" >
+          <div id="code">
+              <ul>
+                  <li class="last"><img alt="艺术家服务中心二维码" src="__PUBLIC__/admin/images/code_service.png"><br />艺术家服务中心</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div title="返回顶部" class="ah" id="toTop" style="display: block;">返回顶部</div>
+  <a target="_blank" title="意见反馈" href="#" id="message" style="">意见反馈</a></div>
+<!--统计代码-->
+
+<script type='text/javascript' src='http://passport.artron.net/growingio/script'></script>
+<script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function () {
+        _vds.push(['setAccountId', '276fdc71b3c353173f111df9361be1bb']);
+        if ('undefined' != typeof(_giuser) && _giuser) {
+            _vds.push(['setCS1', 'user_id', _giuser.uid]);
+            _vds.push(['setCS2', 'gender', _giuser.gender]);
+            _vds.push(['setCS3', 'source', _giuser.source]);
+            _vds.push(['setCS4', 'date', _giuser.date]);
+        }
+        (function () {
+            var vds = document.createElement('script');
+            vds.type = 'text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        })();
+    })();
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F851619594aa1d1fb8c108cde832cc127' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>
